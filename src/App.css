@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  background-color: rgb(240, 233, 233);
+  justify-content: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
 }
 
@@ -13,15 +15,47 @@
   }
 }
 
+.container {
+  max-width: 1170px;
+  /* padding: 0 15px; */
+  margin: 0 auto;
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  height: 100px;
+  width: 100%;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center; */
+  font-size: calc(10px + 1vmin);
   color: white;
+  float: left;
+  position: fixed;
+  z-index: 10;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: 0px;
+}
+
+.header-right a {
+  line-height: 100px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(136, 160, 156, 0.5);
 }
 
 .App-link {
@@ -35,4 +69,202 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* SEARCH */
+.search {
+  float: right;
+  padding-top: 150px;
+  width: 350px;
+}
+
+.search-bar {
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.search-button {
+  height: 35px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search-button:hover {
+  background: #fff;
+  color:#444;
+}
+
+.search-button:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+
+.search-button:active {
+  outline: 0;
+}
+
+.image-div {
+  float: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.img {
+  float: center;
+  height: auto; 
+  max-width: 100%;
+  position: relative;
+  display:block;
+}
+
+/* data-sample */
+.data {
+  float: center;
+  padding-top: 200px;
+  width: 100%;  
+  height: auto;
+  justify-content: center;
+}
+
+.playlist {
+  padding: 20px 5px 10px 5px;
+  border: solid 2px rgb(95, 158, 160);
+  margin: 20px 15px 20px 15px;
+  height: 100%;
+  border-radius: 10px;
+
+}
+
+.playlist-in {
+  padding: 20px 5px 10px 5px;
+  border: solid 2px rgb(140, 160, 95);
+  margin: 20px 15px 20px 15px;
+  height: 100%;
+  border-style: dotted;
+  border-radius: 10px;
+}
+
+.playlist-icon {
+  padding-top: 10px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  display: block;
+}
+
+.txt-contents {
+  width: 100%;
+  display: inline-block;
+  font-size: 15px;
+  color: rgb(52, 51, 59);
+  font-weight: bold;
+}
+
+.button-div {
+  padding-top: 20px;
+}
+
+.h1 {
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.aHref {
+  text-align: center;
+}
+
+.button-div {
+  text-align: center;
+}
+
+.btn-playlist {
+  width: 100%;
+  color: #2dbd6e;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+#btn-play {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(25, 220, 91, 1) 0%,
+    rgba(20, 210, 97, 1) 8%,
+    rgba(80, 210, 23, 1) 69%,
+    rgba(23, 210, 107, 1) 100%,
+    rgba(10, 211, 191, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin-bottom: 20px;
+  transition: 0.25s;
+  width: 50%;
+}
+
+#btn-play:hover {
+  background: #fff;
+  color:black;
+}
+
+#btn-play:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+
+#btn-play:active {
+  outline: 0;
+}
+
+.artist1 {
+  justify-content: left;
+  text-align: left;
+  padding: 20px;
+}
+
+.artist {
+  justify-content: left;
+  text-align: left;
+  padding: 10px;
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.singer {
+  text-align: left;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #282c34;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
