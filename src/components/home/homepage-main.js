@@ -27,7 +27,7 @@ export default function HomePageMain() {
                                                                 return (
                                                                     <div key={art}>
                                                                         <p className="txt-contents">{artistAtribute.name} - {albumAtribute.album.name}</p>
-                                                                        <div class="aHref">
+                                                                        <div className="aHref">
                                                                             {
                                                                                 artistAtribute.external_urls && (
                                                                                     <a href={artistAtribute.external_urls?.spotify} >Go to Spotify </a>
@@ -39,7 +39,7 @@ export default function HomePageMain() {
                                                                 )
                                                             })}
                                                             <div className="button-div">
-                                                                <button type='submit' class='btn-playlist' id='btn-play'>Select</button>
+                                                                <button type='submit' className='btn-playlist' id='btn-play'>Select</button>
                                                             </div>
                                                         </div>
                                                     </div>

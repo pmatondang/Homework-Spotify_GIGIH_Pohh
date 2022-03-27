@@ -1,0 +1,129 @@
+/* album-sample */
+.album {
+    float: center;
+    padding-top: 200px;
+    width: 100%;  
+    height: auto;
+    justify-content: center;
+}
+
+.top-wrapper {
+    width: auto;
+    height: 20%;
+}
+  
+.album-in {
+    /* border: solid 2px rgb(220, 228, 209); */
+    margin: 20px 15px 20px 15px;
+    height: 320px;
+    /* border-style: dotted; */
+    background-color: rgb(240, 233, 233);
+}
+
+.album-in:hover {
+    background: linear-gradient(130deg, #282c34 0%, #8293ff 100%);
+    box-shadow: none;
+    border-radius: 10px;
+  }
+  
+.album-icon {
+    padding-top: 20px;
+    padding-left: 350px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    display: block;
+}
+
+.singer {
+    padding-left: 350px;
+    color: black;
+    position: relative;
+    display: block;
+}
+
+.txt-contents {
+    width: 100%;
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(52, 51, 59);
+    font-weight: bold;
+}
+  
+.image-div {
+    float: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+    float: left;
+    height: auto; 
+    max-width: 100%;
+    position: relative;
+    display:block;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+p {
+    text-align: left;
+}
+ 
+.aHref{
+    text-align: left;
+    padding-left: 350px;
+
+}
+
+.btn-div {
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 350px;
+}
+  
+.btn-playlist {
+    width: 100%;
+    color: #00B4CC;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+  
+#btn-play {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgb(25, 220, 204) 0%,
+      rgb(20, 188, 210) 8%,
+      rgb(23, 210, 201) 69%,
+      rgb(23, 182, 210) 100%,
+      rgba(10, 211, 191, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    border: none;
+    border-radius: 21px;
+    box-shadow: 0px 1px 8px #24a0c6;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 42.3px;
+    margin-bottom: 20px;
+    transition: 0.25s;
+    width: 20%;
+}
+  
+#btn-play:hover {
+    background: #fff;
+    color:black;
+}
+  
+#btn-play:active {
+    box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+  
+#btn-play:active {
+    outline: 0;
+}

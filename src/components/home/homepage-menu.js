@@ -12,7 +12,7 @@ export default function HomePageMenu() {
             >
                 Learn React
             </a>
-            <a href="#" class="login">Log in</a>
+            <a href="#" className="login">Log in</a>
         </div>
     )
 

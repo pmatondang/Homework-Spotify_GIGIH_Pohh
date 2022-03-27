@@ -10,10 +10,12 @@ const Gif = {
 
 const ShowGif = () => {
     return (
-        <div className="img">
-            <p>{Gif.title}</p>
-            <img src={Gif.url} />
-            <a href={Gif.webp}>Click Me</a>
+        <div className="top-wrapper">
+            <div className="container img">
+                <p>{Gif.title}</p>
+                <img src={Gif.url} />
+                <a href={Gif.webp}>Click Me</a>
+            </div>
         </div>
     )
 }
