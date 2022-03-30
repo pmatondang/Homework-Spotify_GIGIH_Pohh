@@ -1,4 +1,4 @@
-const data = [
+const dataSample = [
   {
     album: {
       album_type: "ALBUM",
@@ -81,4 +81,4 @@ const data = [
   }
 ];
 
-export default data;
+export default dataSample;

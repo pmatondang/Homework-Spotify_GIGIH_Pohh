@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import AppRouter from './router/AppRouter';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //udah import App dan di App udah ada index.css
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './components/SpotifyAuth/styles.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>,
   document.getElementById('root')
 );
 

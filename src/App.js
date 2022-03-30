@@ -9,6 +9,7 @@ import HomePageHeader from './components/Home/homepage-header';
 import HomePageFooter from './components/Home/homepage-footer';
 import HomePageMain from "./components/Home/homepage-main";
 import Album from "./components/Album";
+import SearchBar from "./components/Search/index";
 
 function App() {
   return (
@@ -16,15 +17,16 @@ function App() {
       <HomePageHeader />
 
       <div className="container">
-        <Search />
+        <SearchBar />
+        {/* <Search /> */}
         {/* <ShowGif />
         <HomePageMain />
         <GifExerciseThree /> */}
       </div>
 
-      <div className="album-div"><Album /></div>
+      {/* <div className="album-div"><Album /></div> */}
 
-      <HomePageFooter />
+      {/* <HomePageFooter /> */}
     </div >
   )
 }
