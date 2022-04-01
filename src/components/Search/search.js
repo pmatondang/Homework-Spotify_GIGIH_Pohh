@@ -19,7 +19,7 @@ async function displayJson() {
         }
     );
     const album = await response.json();
-    console.log(album);
+    // console.log(album);
 }
 displayJson().catch((error) => {
     alert("There is an error");

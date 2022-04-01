@@ -31,6 +31,31 @@ body {
   font-size: 1.2rem;
 }
 
+.search-button {
+  height: 45px;
+  width: 100px;
+  border: 0px solid #a7e4ee;
+  background: #00B4CC;
+  text-align: center;
+  color: rgb(44, 42, 42);
+  border-radius: 5px ;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search-button:hover {
+  background: #fff;
+  color:#444;
+}
+
+.search-button:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+
+.search-button:active {
+  outline: 0;
+}
+
 .main {
   width: 90%;
   margin: 2rem auto;

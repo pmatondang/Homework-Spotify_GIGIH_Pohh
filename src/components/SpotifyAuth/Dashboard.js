@@ -99,8 +99,9 @@ const Dashboard = (props) => {
             }
           }}
         />
-      )}
-    </React.Fragment>
+      )
+      }
+    </React.Fragment >
   );
 };
 
