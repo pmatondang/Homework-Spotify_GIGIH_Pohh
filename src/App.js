@@ -13,10 +13,11 @@ import SearchBar from "./components/Search/index";
 import SearchBarIndex from "./components/Home/search-bar-index";
 import { useSelector, useDispatch } from "react-redux";
 import { setToken } from "./reducer/tokenSlice";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 function App() {
-  const [token, setToken] = useState("");
-  const token = useSelector((state) => state.token.value);
+  // const [token, setToken] = useState("");
+  // const token = useSelector((state) => state.token.value);
   const dispatch = useDispatch();
   const [userId, setUserId] = useState("");
   const [searchSong, setSearchSong] = useState("");
@@ -47,22 +48,46 @@ function App() {
 
   return (
     <div className="App">
-      <Provider store
+
       <HomePageHeader />
 
       <div className="container">
-        <SearchBarIndex />
-        {/* <Search /> */}
-        {/* <ShowGif />
-        <HomePageMain />
-        <GifExerciseThree /> */}
+        {isAuth ? (
+          <Router>
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => {
+                  return isAuth ? (
+                    <Redirect to="/create-playlist" />
+                  ) : (
+                    <Redirect to="/" />
+                  );
+                }}
+              />
+
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/create-playlist">
+                <CreatePlaylist />
+              </Route>
+              <Route path="/playlist">
+                <Playlist />
+              </Route>
+            </Switch>
+          </Router>
+        ) : (
+          <div className="container d-flex justify-content-center align-items-center vh-100">
+            <a href={urlGet} className="btn btn-danger">
+              Anda Belum Login, Klik Untuk Login
+            </a>
+          </div>
+        )}
       </div>
-
-      {/* <div className="album-div"><Album /></div> */}
-
-      {/* <HomePageFooter /> */}
     </div >
-  )
-}
+  );
+};
 export default App;
 
