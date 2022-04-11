@@ -17,4 +17,4 @@ const SearchBarIndex = () => {
     );
 };
 
-export default Home;
+export default SearchBarIndex;

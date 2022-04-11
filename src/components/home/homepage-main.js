@@ -20,7 +20,7 @@ export default function HomePageMain() {
                                                         <div className="playlist-in" key={imageAtribute}>
                                                             {/* <p>{imageAtribute.id}</p> */}
                                                             <div className="image-div">
-                                                                <center><img className="img" src={imageAtribute.url} /></center>
+                                                                <center><img className="img" src={imageAtribute.url} alt="album" /></center>
                                                             </div>
                                                             <p className="playlist-icon">Title: {albumAtribute.name}</p>
                                                             {albumAtribute.artists.map((artistAtribute, art) => {

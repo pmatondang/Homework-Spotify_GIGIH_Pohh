@@ -6,7 +6,7 @@ export default function HomePageFooter() {
             <div className="playlist-wrapper top-wrapper">
                 <div className="container">
                     <p><br />© All Rights Reserved by
-                        <a href="#"> @pohhmtd 2022</a>
+                        <a href=""> @pohhmtd 2022</a>
                     </p>
                 </div>
             </div>

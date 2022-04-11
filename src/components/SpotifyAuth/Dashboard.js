@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../../index.css';
 import '../../App.css';
 import Header from './Header';
-import HomePageHeader from '../../components/Home/homepage-header';
 
 import {
   initiateGetResult,

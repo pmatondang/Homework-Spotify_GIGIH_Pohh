@@ -6,7 +6,7 @@ const Gif = ({ title, rating, uploadedDate, url, webp }) => (
         <h1>{title}</h1>
         <p className="txt-contents">{uploadedDate}</p>
         <p className="txt-contents">{rating}</p>
-        <img className="img" src={url} />
+        <img className="img" src={url} alt="gif dari data-gif" />
         <a href={webp} />
     </div>
 );

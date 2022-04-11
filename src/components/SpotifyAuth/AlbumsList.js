@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Card, Text } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import _ from 'lodash';
 import music from '../../images/music.jpeg';
 import '../../index.css'
 const AlbumsList = ({ albums }) => {
-    const [selectedItems, setSelectedItems, isSelected] = useState([]);
+    const [isSelected] = useState([]);
     const handleSelect = (idx) => {
         let arr = albums.items.map((item, ind) => {
             if (idx == ind) {
@@ -15,11 +15,6 @@ const AlbumsList = ({ albums }) => {
         console.log("selection handler ==> ", arr);
     }
 
-    // const handleSelect = () => {
-    //     var isSelect = document.getElementById("btn-selected");
-    //     if (isSelect.value == "Select") isSelect.value = "Deselect";
-    //     else isSelect.value = "Select";
-    // }
     return (
         <React.Fragment>
             {Object.keys(albums).length > 0 && (

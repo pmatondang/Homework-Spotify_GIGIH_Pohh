@@ -13,7 +13,7 @@ const ShowGif = () => {
         <div className="top-wrapper">
             <div className="container img">
                 <p>{Gif.title}</p>
-                <img src={Gif.url} />
+                <img src={Gif.url} alt="gif yang di ambil dari url" />
                 <a href={Gif.webp}>Click Me</a>
             </div>
         </div>

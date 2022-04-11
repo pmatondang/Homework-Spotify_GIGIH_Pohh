@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Search = () => {
-    const [data, setData] = useState();
     const [query, setQuery] = useState("");
 
     const handleOnChange = (e) => {
@@ -10,10 +9,10 @@ const Search = () => {
     }
     const getGifs = async () => {
         const gifs = await
-        axios
-        .get(
-            `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${apiKey}&limit=12`
-        )
+            axios
+                .get(
+                    `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${apiKey}&limit=12`
+                )
 
     }
     <div>
