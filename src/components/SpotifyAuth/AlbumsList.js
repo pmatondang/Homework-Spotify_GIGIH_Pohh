@@ -23,33 +23,35 @@ const AlbumsList = ({ albums }) => {
                         return (
                             <React.Fragment key={index}>
                                 <Card style={{ width: '18rem' }}>
-                                    <a
-                                        target="_blank"
-                                        href={album.external_urls.spotify}
-                                        rel="noopener noreferrer"
-                                        className="card-image-link"
-                                    >
-                                        {!_.isEmpty(album.images) ? (
-                                            <Card.Img
-                                                variant="top"
-                                                src={album.images[0].url}
-                                                alt=""
-                                            />
-                                        ) : (
-                                            <img src={music} alt="" />
-                                        )}
-                                    </a>
-                                    <Card.Body>
-                                        <Card.Title>{album.name}</Card.Title>
-                                        <Card.Text>
-                                            <small>
-                                                {album.artists.map((artist) => artist.name).join(', ')}
-                                            </small><br />
-                                            <small>
-                                                <button className="search-button" type="submit" id="btn-selected" onClick={handleSelect}>{isSelected ? "Deselect" : "Select"}</button>
-                                            </small>
-                                        </Card.Text>
-                                    </Card.Body>
+                                    <div className='parent-grid'>
+                                        <a
+                                            target="_blank"
+                                            href={album.external_urls.spotify}
+                                            rel="noopener noreferrer"
+                                            className="card-image-link flex"
+                                        >
+                                            {!_.isEmpty(album.images) ? (
+                                                <Card.Img
+                                                    variant="top"
+                                                    src={album.images[0].url}
+                                                    alt=""
+                                                />
+                                            ) : (
+                                                <img src={music} alt="" />
+                                            )}
+                                        </a>
+                                        <Card.Body>
+                                            <Card.Title>{album.name}</Card.Title>
+                                            <Card.Text>
+                                                <small>
+                                                    {album.artists.map((artist) => artist.name).join(', ')}
+                                                </small><br />
+                                                <small>
+                                                    <button className="search-button" type="submit" id="btn-selected" onClick={handleSelect}>{isSelected ? "Deselect" : "Select"}</button>
+                                                </small>
+                                            </Card.Text>
+                                        </Card.Body>
+                                    </div>
                                 </Card>
                             </React.Fragment>
                         );

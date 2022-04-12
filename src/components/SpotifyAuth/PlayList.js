@@ -11,24 +11,26 @@ const PlayList = ({ playlist }) => {
             return (
               <React.Fragment key={index}>
                 <Card style={{ width: '18rem' }}>
-                  <a
-                    target="_blank"
-                    href={item.external_urls.spotify}
-                    rel="noopener noreferrer"
-                    className="card-image-link"
-                  >
-                    {!_.isEmpty(item.images) ? (
-                      <Card.Img variant="top" src={item.images[0].url} alt="" />
-                    ) : (
-                      <img src={music} alt="" />
-                    )}
-                  </a>
-                  <Card.Body>
-                    <Card.Title>{item.name}</Card.Title>
-                    <Card.Text>
-                      <small>By {item.owner.display_name}</small>
-                    </Card.Text>
-                  </Card.Body>
+                  <div className='parent-grid'>
+                    <a
+                      target="_blank"
+                      href={item.external_urls.spotify}
+                      rel="noopener noreferrer"
+                      className="card-image-link flex"
+                    >
+                      {!_.isEmpty(item.images) ? (
+                        <Card.Img variant="top" src={item.images[0].url} alt="" />
+                      ) : (
+                        <img src={music} alt="" />
+                      )}
+                    </a>
+                    <Card.Body className="child-grid">
+                      <Card.Title>{item.name}</Card.Title>
+                      <Card.Text>
+                        <small>By {item.owner.display_name}</small>
+                      </Card.Text>
+                    </Card.Body>
+                  </div>
                 </Card>
               </React.Fragment>
             );
